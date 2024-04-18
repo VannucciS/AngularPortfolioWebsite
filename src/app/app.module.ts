@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProjectModalComponent } from './project-modal/project-modal.component'
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { ResumeComponent } from './resume/resume.component';
     HomeComponent,
     PortfolioComponent,
     ContactsComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProjectCardComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
