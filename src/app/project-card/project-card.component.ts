@@ -18,8 +18,11 @@ export class ProjectCardComponent {
 
   OpenProjectModal(){
     const modalOptions: ModalOptions = {
-      class: "modal-lg"
-    }
+      class: "modal-lg",
+      initialState: {
+        project: this.project
+      }
+    };
     this.bsModalRef = this.modalService.show(ProjectModalComponent, modalOptions);
   }
 }
