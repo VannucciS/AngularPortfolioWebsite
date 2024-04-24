@@ -1,1 +1,54 @@
-<p>resume works!</p>
+<div class="container text-center">
+    <button class="btn btn-primary mb-5 shadow border" (click)="DownloadFile()">Download pdf resume!</button>
+
+    <div class="pb-2">
+
+        <accordion [isAnimated]="true" class="shadow">
+            <accordion-group [(isOpen)]="isWorkingExperienceOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Personal Information</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isWorkingExperienceOpen" style="color: white;" >></div>
+                        <div *ngIf="isWorkingExperienceOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+            <div style="text-align: left;">
+                <h2 class="mb-0">Name</h2>
+                <p> some Personal Information here</p>
+            </div>
+        </accordion-group>
+        
+        <accordion [isAnimated]="true">
+            <accordion-group heading="Work Experience">
+                <div style="text-align: left;"> 
+                <h2 class="mb-0">Customer Service Associate</h2>
+                <h3 class="text-primary"> Bank of Brazil</h3>
+                <ul>
+                    <li>Answer inquiries by telephone, email or chat</li>
+                </ul>
+                </div>
+        </accordion-group>
+        
+        <accordion [isAnimated]="true">
+            <accordion-group heading="Educational Background">
+                <div style="text-align: left;"> 
+                    <h2 class="mb-0">Customer Service Associate</h2>
+                    <h3 class="text-primary"> Bank of Brazil</h3>
+                    <ul>
+                        <li>Answer inquiries by telephone, email or chat</li>
+                    </ul>
+                </div>
+        </accordion-group>
+        
+        <accordion [isAnimated]="true">
+            <accordion-group heading="Skills">
+            <p> some Personal Information here</p>
+        </accordion-group>
+        </accordion>
+
+
+
+
+
+
